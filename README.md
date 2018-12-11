@@ -1,4 +1,4 @@
-# iOS
+# iOS [![Build Status](https://travis-ci.org/O2MC/objective-c-tracker.svg?branch=master)](https://travis-ci.org/O2MC/objective-c-tracker)
 
 This folder contains the iOS [SDK](sdk) and an [example app](app-obj-c/) written in objective-c.
 
