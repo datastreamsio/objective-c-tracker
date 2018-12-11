@@ -1,4 +1,11 @@
 language: objective-c
 xcode_project: sdk/O2MC.xcodeproj
-xcode_scheme: Tests
-xcode_destination: platform=iOS Simulator,OS=9.0,name=iPhone 6
+
+xcode_scheme:
+  - Tests
+
+xcode_sdk:
+  - iphonesimulator8.4
+  - iphonesimulator9.3
+  - iphonesimulator11.4
+  - iphonesimulator12.1
