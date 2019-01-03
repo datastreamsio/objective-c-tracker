@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/nickyromeijn/Gitrepos/O2MCmobileTracker/ios/O2MC.xcodeproj">
+      location = "self:tracker.xcodeproj">
    </FileRef>
 </Workspace>
