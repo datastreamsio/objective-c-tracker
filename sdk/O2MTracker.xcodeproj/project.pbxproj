@@ -30,7 +30,7 @@
 		226F875B21DE3A9500F21E7B /* O2MEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F874521DE3A9500F21E7B /* O2MEvent.m */; };
 		226F875C21DE3A9500F21E7B /* O2MBatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 226F874621DE3A9500F21E7B /* O2MBatchManager.h */; };
 		226F875D21DE3A9500F21E7B /* O2MUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 226F874721DE3A9500F21E7B /* O2MUtil.h */; };
-		22E6563B21DE690B003FC05D /* O2Mtracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 226F871721DE3A5F00F21E7B /* O2Mtracker.framework */; };
+		22E6563B21DE690B003FC05D /* O2MTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 226F871721DE3A5F00F21E7B /* O2MTracker.framework */; };
 		22E6564121DE6915003FC05D /* EventManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F87DE21DE670D00F21E7B /* EventManagerTests.m */; };
 		22E6564221DE6915003FC05D /* O2MBatchManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F87E021DE672D00F21E7B /* O2MBatchManagerTests.m */; };
 		22E6564321DE6915003FC05D /* O2MEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F87E221DE674600F21E7B /* O2MEventTests.m */; };
@@ -47,7 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		226F871721DE3A5F00F21E7B /* O2Mtracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = O2Mtracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		226F871721DE3A5F00F21E7B /* O2MTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = O2MTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		226F871A21DE3A5F00F21E7B /* tracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracker.h; sourceTree = "<group>"; };
 		226F871B21DE3A5F00F21E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		226F873121DE3A9400F21E7B /* O2MDispatcherDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = O2MDispatcherDelegate.h; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		226F87DE21DE670D00F21E7B /* EventManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventManagerTests.m; sourceTree = "<group>"; };
 		226F87E021DE672D00F21E7B /* O2MBatchManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = O2MBatchManagerTests.m; sourceTree = "<group>"; };
 		226F87E221DE674600F21E7B /* O2MEventTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = O2MEventTests.m; sourceTree = "<group>"; };
-		22E6563621DE690B003FC05D /* O2MtrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = O2MtrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E6563621DE690B003FC05D /* O2MTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = O2MTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E6563A21DE690B003FC05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E6563B21DE690B003FC05D /* O2Mtracker.framework in Frameworks */,
+				22E6563B21DE690B003FC05D /* O2MTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +110,8 @@
 		226F871821DE3A5F00F21E7B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				226F871721DE3A5F00F21E7B /* O2Mtracker.framework */,
-				22E6563621DE690B003FC05D /* O2MtrackerTests.xctest */,
+				226F871721DE3A5F00F21E7B /* O2MTracker.framework */,
+				22E6563621DE690B003FC05D /* O2MTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,9 +191,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		226F871621DE3A5F00F21E7B /* O2Mtracker */ = {
+		226F871621DE3A5F00F21E7B /* O2MTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 226F872B21DE3A5F00F21E7B /* Build configuration list for PBXNativeTarget "O2Mtracker" */;
+			buildConfigurationList = 226F872B21DE3A5F00F21E7B /* Build configuration list for PBXNativeTarget "O2MTracker" */;
 			buildPhases = (
 				226F871221DE3A5F00F21E7B /* Headers */,
 				226F871321DE3A5F00F21E7B /* Sources */,
@@ -204,14 +204,14 @@
 			);
 			dependencies = (
 			);
-			name = O2Mtracker;
+			name = O2MTracker;
 			productName = tracker;
-			productReference = 226F871721DE3A5F00F21E7B /* O2Mtracker.framework */;
+			productReference = 226F871721DE3A5F00F21E7B /* O2MTracker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		22E6563521DE690B003FC05D /* O2MtrackerTests */ = {
+		22E6563521DE690B003FC05D /* O2MTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22E6564021DE690B003FC05D /* Build configuration list for PBXNativeTarget "O2MtrackerTests" */;
+			buildConfigurationList = 22E6564021DE690B003FC05D /* Build configuration list for PBXNativeTarget "O2MTrackerTests" */;
 			buildPhases = (
 				22E6563221DE690B003FC05D /* Sources */,
 				22E6563321DE690B003FC05D /* Frameworks */,
@@ -222,9 +222,9 @@
 			dependencies = (
 				22E6563D21DE690B003FC05D /* PBXTargetDependency */,
 			);
-			name = O2MtrackerTests;
+			name = O2MTrackerTests;
 			productName = trackerTests;
-			productReference = 22E6563621DE690B003FC05D /* O2MtrackerTests.xctest */;
+			productReference = 22E6563621DE690B003FC05D /* O2MTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +244,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 226F871121DE3A5F00F21E7B /* Build configuration list for PBXProject "O2Mtracker" */;
+			buildConfigurationList = 226F871121DE3A5F00F21E7B /* Build configuration list for PBXProject "O2MTracker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -256,8 +256,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				226F871621DE3A5F00F21E7B /* O2Mtracker */,
-				22E6563521DE690B003FC05D /* O2MtrackerTests */,
+				226F871621DE3A5F00F21E7B /* O2MTracker */,
+				22E6563521DE690B003FC05D /* O2MTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,7 +313,7 @@
 /* Begin PBXTargetDependency section */
 		22E6563D21DE690B003FC05D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 226F871621DE3A5F00F21E7B /* O2Mtracker */;
+			target = 226F871621DE3A5F00F21E7B /* O2MTracker */;
 			targetProxy = 22E6563C21DE690B003FC05D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -526,7 +526,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		226F871121DE3A5F00F21E7B /* Build configuration list for PBXProject "O2Mtracker" */ = {
+		226F871121DE3A5F00F21E7B /* Build configuration list for PBXProject "O2MTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				226F872921DE3A5F00F21E7B /* Debug */,
@@ -535,7 +535,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		226F872B21DE3A5F00F21E7B /* Build configuration list for PBXNativeTarget "O2Mtracker" */ = {
+		226F872B21DE3A5F00F21E7B /* Build configuration list for PBXNativeTarget "O2MTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				226F872C21DE3A5F00F21E7B /* Debug */,
@@ -544,7 +544,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22E6564021DE690B003FC05D /* Build configuration list for PBXNativeTarget "O2MtrackerTests" */ = {
+		22E6564021DE690B003FC05D /* Build configuration list for PBXNativeTarget "O2MTrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22E6563E21DE690B003FC05D /* Debug */,
