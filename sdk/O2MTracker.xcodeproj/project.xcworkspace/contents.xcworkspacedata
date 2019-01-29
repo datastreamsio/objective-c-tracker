@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/tim/Documents/workspace/o2mc_objc_tracker/sdk/O2MTracker.xcodeproj">
+      location = "self:/Users/tim/Documents/workspace/o2mc_objc_O2MTracker/sdk/O2MTracker.xcodeproj">
    </FileRef>
 </Workspace>
