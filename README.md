@@ -2,6 +2,55 @@
 
 This folder contains the iOS [SDK](sdk) and an [example app](app-obj-c/) written in objective-c.
 
+## Installation
+
+### 1. Obtain the SDK
+
+Obtain the source code.
+
+Drag the `tracker.xcodeproj` project in the `sdk` folder to your project as a Framework.
+
+![Step 1](docs/step1.png)
+
+Go to `Build Phases` -> `Link Binary With Libraries`.
+
+![Step 2](docs/step2.png)
+
+Now click on the `+` sign and add the `tracker.framework`.
+
+![Step 3](docs/step3.png)
+
+Your `Link Binary With Libraries` should look like this:
+
+![Step 4](docs/step4.png)
+
+### 2. Initialize the SDK
+
+Open your app's `AppDelegate.m` and add the following header import:
+
+```objective-c
+#import <tracker/tracker.h>
+```
+
+We recommend initializing the SDK in the `didFinishLaunchingWithOptions` method.
+
+```objective-c
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Be sure to define a separate end point for debug builds and production builds.
+    [[O2MC sharedInstance] setEndpoint:@"http://127.0.0.1:5000/events"];
+    return YES;
+}
+```
+
+### 3. Start tracking!
+
+Use the following method from anywhere to start tracking events. Be sure to import the tracker header as well.
+
+```objective-c
+[[O2MC sharedInstance] track:@"Hello world!"];
+```
+
+
 ## Configuration
 
 ### View tracking
