@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "22E6563521DE690B003FC05D"
-               BuildableName = "trackerTests.xctest"
-               BlueprintName = "trackerTests"
-               ReferencedContainer = "container:tracker.xcodeproj">
+               BuildableName = "O2MtrackerTests.xctest"
+               BlueprintName = "O2MtrackerTests"
+               ReferencedContainer = "container:O2Mtracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "22E6563521DE690B003FC05D"
-               BuildableName = "trackerTests.xctest"
-               BlueprintName = "trackerTests"
-               ReferencedContainer = "container:tracker.xcodeproj">
+               BuildableName = "O2MtrackerTests.xctest"
+               BlueprintName = "O2MtrackerTests"
+               ReferencedContainer = "container:O2Mtracker.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "22E6563521DE690B003FC05D"
-            BuildableName = "trackerTests.xctest"
-            BlueprintName = "trackerTests"
-            ReferencedContainer = "container:tracker.xcodeproj">
+            BuildableName = "O2MtrackerTests.xctest"
+            BlueprintName = "O2MtrackerTests"
+            ReferencedContainer = "container:O2Mtracker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -74,9 +74,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "22E6563521DE690B003FC05D"
-            BuildableName = "trackerTests.xctest"
-            BlueprintName = "trackerTests"
-            ReferencedContainer = "container:tracker.xcodeproj">
+            BuildableName = "O2MtrackerTests.xctest"
+            BlueprintName = "O2MtrackerTests"
+            ReferencedContainer = "container:O2Mtracker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
