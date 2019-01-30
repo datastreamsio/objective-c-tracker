@@ -21,7 +21,7 @@ Now click on the `+` sign and add the `O2MTracker.framework` to your `Link Binar
 Open your app's `AppDelegate.m` and add the following header import:
 
 ```objective-c
-#import <tracker/tracker.h>
+#import <O2MTracker/O2MTracker.h>
 ```
 
 We recommend initializing the SDK in the `didFinishLaunchingWithOptions` method.
