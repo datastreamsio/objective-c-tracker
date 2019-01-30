@@ -4,25 +4,17 @@ This folder contains the iOS [SDK](sdk) and an [example app](app-obj-c/) written
 
 ## Installation
 
-### 1. Obtain the SDK
+### 1. Obtain and install the SDK
 
 Obtain the source code.
 
-Drag the `tracker.xcodeproj` project in the `sdk` folder to your project as a Framework.
-
-![Step 1](docs/step1.png)
+Drag the `O2MTracker.xcodeproj` project in the `sdk` folder to your project as a Framework.
 
 Go to `Build Phases` -> `Link Binary With Libraries`.
 
-![Step 2](docs/step2.png)
 
-Now click on the `+` sign and add the `tracker.framework`.
+Now click on the `+` sign and add the `O2MTracker.framework` to your `Link Binary With Libraries`.
 
-![Step 3](docs/step3.png)
-
-Your `Link Binary With Libraries` should look like this:
-
-![Step 4](docs/step4.png)
 
 ### 2. Initialize the SDK
 
