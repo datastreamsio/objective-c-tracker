@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -11,13 +11,13 @@
             buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "22C1580C21088FE400A18575"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
-               ReferencedContainer = "container:O2MC.xcodeproj">
+               BlueprintIdentifier = "22E6563521DE690B003FC05D"
+               BuildableName = "O2MTrackerTests.xctest"
+               BlueprintName = "O2MTrackerTests"
+               ReferencedContainer = "container:O2MTracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,14 +27,15 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3CB186CD2A6A8575D2DFBD56"
-            BuildableName = "libdatastreams.a"
-            BlueprintName = "datastreams"
-            ReferencedContainer = "container:O2MC.xcodeproj">
+            BlueprintIdentifier = "226F871621DE3A5F00F21E7B"
+            BuildableName = "O2MTracker.framework"
+            BlueprintName = "O2MTracker"
+            ReferencedContainer = "container:O2MTracker.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -42,22 +43,13 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "22C1580C21088FE400A18575"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
-               ReferencedContainer = "container:O2MC.xcodeproj">
+               BlueprintIdentifier = "22E6563521DE690B003FC05D"
+               BuildableName = "O2MTrackerTests.xctest"
+               BlueprintName = "O2MTrackerTests"
+               ReferencedContainer = "container:O2MTracker.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "22C1580C21088FE400A18575"
-            BuildableName = "Tests.xctest"
-            BlueprintName = "Tests"
-            ReferencedContainer = "container:O2MC.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -74,10 +66,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "22C1580C21088FE400A18575"
-            BuildableName = "Tests.xctest"
-            BlueprintName = "Tests"
-            ReferencedContainer = "container:O2MC.xcodeproj">
+            BlueprintIdentifier = "22E6563521DE690B003FC05D"
+            BuildableName = "O2MTrackerTests.xctest"
+            BlueprintName = "O2MTrackerTests"
+            ReferencedContainer = "container:O2MTracker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -92,10 +84,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "22C1580C21088FE400A18575"
-            BuildableName = "Tests.xctest"
-            BlueprintName = "Tests"
-            ReferencedContainer = "container:O2MC.xcodeproj">
+            BlueprintIdentifier = "22E6563521DE690B003FC05D"
+            BuildableName = "O2MTrackerTests.xctest"
+            BlueprintName = "O2MTrackerTests"
+            ReferencedContainer = "container:O2MTracker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

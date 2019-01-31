@@ -1,4 +1,4 @@
 language: objective-c
-xcode_project: sdk/O2MC.xcodeproj
-xcode_scheme: Tests
+xcode_project: sdk/O2MTracker.xcodeproj
+xcode_scheme: O2MTrackerTests
 xcode_destination: platform=iOS Simulator,OS=9.0,name=iPhone 6

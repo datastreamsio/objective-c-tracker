@@ -34,7 +34,7 @@
 - (void)testClearEvents {
     O2MEvent *event = [[O2MEvent alloc] init:@"foobar"];
     [self->_eventManager addEvent:event];
-    
+
     XCTAssertEqual(self->_eventManager.eventCount, 1);
     [self->_eventManager clearEvents];
     XCTAssertEqual(self->_eventManager.eventCount, 0);
@@ -42,7 +42,7 @@
 
 - (void)testAddingSingleEvent {
     O2MEvent *event = [[O2MEvent alloc] init:@"foobar2"];
-    
+
     [self->_eventManager addEvent:event];
 
     XCTAssertEqual(self->_eventManager.eventCount, 1);

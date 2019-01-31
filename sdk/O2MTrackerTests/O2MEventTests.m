@@ -40,8 +40,8 @@
 - (void)testInitEventWithProps {
     NSString *eventName = @"testEvent";
     NSDictionary *eventProps = @{
-                                @"foo": @"bar"
-                                };
+                                 @"foo": @"bar"
+                                 };
     O2MEvent *event = [[O2MEvent alloc] initWithProperties:eventName properties:eventProps];
 
     // Test if we have an event name set.
