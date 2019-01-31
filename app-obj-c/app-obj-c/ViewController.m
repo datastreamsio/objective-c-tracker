@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "O2MC.h"
+#import <O2MTracker/O2MTracker.h>
 
 @interface ViewController ()
 
