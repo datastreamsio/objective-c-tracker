@@ -9,15 +9,15 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "226F871621DE3A5F00F21E7B"
-               BuildableName = "tracker.framework"
-               BlueprintName = "tracker"
-               ReferencedContainer = "container:tracker.xcodeproj">
+               BlueprintIdentifier = "22E6563521DE690B003FC05D"
+               BuildableName = "O2MTrackerTests.xctest"
+               BlueprintName = "O2MTrackerTests"
+               ReferencedContainer = "container:O2MTracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,28 +26,30 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "226F871621DE3A5F00F21E7B"
+            BuildableName = "O2MTracker.framework"
+            BlueprintName = "O2MTracker"
+            ReferencedContainer = "container:O2MTracker.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "226F871F21DE3A5F00F21E7B"
-               BuildableName = "trackerTests.xctest"
-               BlueprintName = "trackerTests"
-               ReferencedContainer = "container:tracker.xcodeproj">
+               BlueprintIdentifier = "22E6563521DE690B003FC05D"
+               BuildableName = "O2MTrackerTests.xctest"
+               BlueprintName = "O2MTrackerTests"
+               ReferencedContainer = "container:O2MTracker.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "226F871621DE3A5F00F21E7B"
-            BuildableName = "tracker.framework"
-            BlueprintName = "tracker"
-            ReferencedContainer = "container:tracker.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,10 +66,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "226F871621DE3A5F00F21E7B"
-            BuildableName = "tracker.framework"
-            BlueprintName = "tracker"
-            ReferencedContainer = "container:tracker.xcodeproj">
+            BlueprintIdentifier = "22E6563521DE690B003FC05D"
+            BuildableName = "O2MTrackerTests.xctest"
+            BlueprintName = "O2MTrackerTests"
+            ReferencedContainer = "container:O2MTracker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +84,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "226F871621DE3A5F00F21E7B"
-            BuildableName = "tracker.framework"
-            BlueprintName = "tracker"
-            ReferencedContainer = "container:tracker.xcodeproj">
+            BlueprintIdentifier = "22E6563521DE690B003FC05D"
+            BuildableName = "O2MTrackerTests.xctest"
+            BlueprintName = "O2MTrackerTests"
+            ReferencedContainer = "container:O2MTracker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
