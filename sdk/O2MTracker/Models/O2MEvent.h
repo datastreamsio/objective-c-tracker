@@ -12,11 +12,11 @@
 @interface O2MEvent : NSObject
 
 @property (copy, nonatomic)NSString* event;
-@property (copy, nonatomic)NSDictionary* properties;
+@property (copy, nonatomic)NSObject* properties;
 @property (copy, readonly, nonatomic) NSString* timestamp;
 
 -(instancetype) init :(NSString*) event;
--(instancetype) initWithProperties:(NSString*)event properties:(NSDictionary*)properties;
+-(instancetype) initWithProperties:(NSString*)event properties:(NSObject*)properties;
 -(NSDictionary*) toDict;
 
 @end

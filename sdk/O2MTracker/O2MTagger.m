@@ -149,7 +149,7 @@
     });
 }
 
--(void)trackWithProperties:(NSDictionary*)properties eventName:(NSString*)eventName;
+-(void)trackWithProperties:(NSObject*)properties eventName:(NSString*)eventName;
 {
     dispatch_async(_tagQueue, ^{
         if (![self->_batchManager isDispatching]) return;
