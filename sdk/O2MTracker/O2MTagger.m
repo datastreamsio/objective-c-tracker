@@ -138,9 +138,18 @@
     }
 }
 
-#pragma mark - Tracking methods
+#pragma mark - Internal tracking methods
+-(void)addEventToBatchWithProperties:(NSObject*)properties eventName:(NSString*)eventName; {
+    dispatch_async(_tagQueue, ^{
+        if (![self->_batchManager isDispatching]) return;
+        [self->_logger logD:@"Track %@:%@", eventName, properties];
 
--(void)track :(NSString*)eventName; {
+        [self->_eventManager addEvent: [[O2MEvent alloc] initWithProperties:eventName
+                                                                 properties:properties]];
+    });
+}
+
+-(void)addEventToBatch:(NSString*)eventName; {
     dispatch_async(_tagQueue, ^{
         if (![self->_batchManager isDispatching]) return;
         [self->_logger logD:@"Track %@", eventName];
@@ -149,15 +158,27 @@
     });
 }
 
+#pragma mark - Tracking methods
+
+-(void)track:(NSString*)eventName; {
+    [self addEventToBatch:eventName];
+}
+
 -(void)trackWithProperties:(NSObject*)properties eventName:(NSString*)eventName;
 {
-    dispatch_async(_tagQueue, ^{
-        if (![self->_batchManager isDispatching]) return;
-        [self->_logger logD:@"Track %@:%@", eventName, properties];
+    [self addEventToBatchWithProperties:properties eventName:eventName];
+}
 
-        [self->_eventManager addEvent: [[O2MEvent alloc] initWithProperties:eventName
-                                                                 properties:properties]];
-    });
+-(void)trackWithBool:(BOOL)eventValue eventName:(nonnull NSString*)eventName; {
+    // Convert BOOL with NSNumber since we only want objects when serializing.
+    [self addEventToBatchWithProperties:[[NSNumber alloc] initWithBool:eventValue] eventName:eventName];
+}
+-(void)trackWithString:(nonnull NSString*)eventValue eventName:(nonnull NSString*)eventName; {
+    [self addEventToBatchWithProperties:eventValue eventName:eventName];
+}
+
+-(void)trackWithNumber:(nonnull NSNumber*)eventValue eventName:(nonnull NSString*)eventName; {
+    [self addEventToBatchWithProperties:eventValue eventName:eventName];
 }
 
 @end

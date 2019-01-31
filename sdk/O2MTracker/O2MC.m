@@ -95,14 +95,14 @@
 }
 
 -(void)trackWithBool:(BOOL)eventValue eventName:(nonnull NSString*)eventName; {
-    [self->_tracker trackWithProperties:[[NSNumber alloc] initWithBool:eventValue] eventName:eventName];
+    [self->_tracker trackWithBool:eventValue eventName:eventName];
 }
 -(void)trackWithString:(nonnull NSString*)eventValue eventName:(nonnull NSString*)eventName; {
-    [self->_tracker trackWithProperties:eventValue eventName:eventName];
+    [self->_tracker trackWithString:eventValue eventName:eventName];
 }
 
 -(void)trackWithNumber:(nonnull NSNumber*)eventValue eventName:(nonnull NSString*)eventName; {
-    [self->_tracker trackWithProperties:eventValue eventName:eventName];
+    [self->_tracker trackWithNumber:eventValue eventName:eventName];
 }
 @end
 
