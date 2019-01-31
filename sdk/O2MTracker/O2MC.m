@@ -90,8 +90,8 @@
     [self->_tracker track:eventName];
 }
 
--(void)trackWithProperties:(nonnull NSString*)eventName properties:(nonnull NSDictionary*)properties; {
-    [self->_tracker trackWithProperties:eventName properties:properties];
+-(void)trackWithProperties:(nonnull NSDictionary*)properties eventName:(nonnull NSString*)eventName; {
+    [self->_tracker trackWithProperties:properties eventName:eventName];
 }
 
 @end
