@@ -91,9 +91,9 @@
 /**
  * Tracks an event with additional data.
  * Essentially adds a new event with the String parameter as name and any additonal properties.
- * @param eventName name of tracked event
  * @param properties anything you'd like to keep track of
+ * @param eventName name of tracked event
  */
--(void)trackWithProperties:(nonnull NSString*)eventName properties:(nonnull NSDictionary*)properties;
+-(void)trackWithProperties:(nonnull NSDictionary*)properties eventName:(nonnull NSString*)eventName;
 
 @end

@@ -53,14 +53,14 @@
     [self O2M_viewDidAppear:animated];
 
     // Track viewDidAppear event
-    [[O2MC sharedInstance] trackWithProperties:@"viewStart" properties:@{@"name": NSStringFromClass([self class])}];
+    [[O2MC sharedInstance] trackWithProperties:@{@"name": NSStringFromClass([self class])} eventName:@"viewStart"];
 }
 
 - (void)O2M_viewWillDisappear:(BOOL)animated; {
     [self O2M_viewWillDisappear:(BOOL)animated];
 
     // Track viewDidDisappear event
-    [[O2MC sharedInstance] trackWithProperties:@"viewStop" properties:@{@"name": NSStringFromClass([self class])}];
+    [[O2MC sharedInstance] trackWithProperties:@{@"name": NSStringFromClass([self class])} eventName:@"viewStop"];
 }
 
 @end
