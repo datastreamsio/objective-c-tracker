@@ -86,7 +86,7 @@
     NSDictionary *eventDict = [event toDict];
     XCTAssertNotNil(eventDict[@"name"]);
     XCTAssertEqual(eventDict[@"name"], eventName);
-    XCTAssertNil(eventDict[@"value"][@"foo"]);
+    XCTAssertNil(eventDict[@"value"]);
     XCTAssertNotNil(eventDict[@"timestamp"]);
 }
 
