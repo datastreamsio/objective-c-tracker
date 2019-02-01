@@ -67,5 +67,9 @@
  * @param properties anything you'd like to keep track of
  * @param eventName name of tracked event
  */
--(void)trackWithProperties:(NSDictionary*)properties eventName:(NSString*)eventName;
+-(void)trackWithProperties:(NSObject*)properties eventName:(NSString*)eventName;
+
+-(void)trackWithBool:(BOOL)eventValue eventName:(nonnull NSString*)eventName;
+-(void)trackWithString:(nonnull NSString*)eventValue eventName:(nonnull NSString*)eventName;
+-(void)trackWithNumber:(nonnull NSNumber*)eventValue eventName:(nonnull NSString*)eventName;
 @end

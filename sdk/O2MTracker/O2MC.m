@@ -94,5 +94,15 @@
     [self->_tracker trackWithProperties:properties eventName:eventName];
 }
 
+-(void)trackWithBool:(BOOL)eventValue eventName:(nonnull NSString*)eventName; {
+    [self->_tracker trackWithBool:eventValue eventName:eventName];
+}
+-(void)trackWithString:(nonnull NSString*)eventValue eventName:(nonnull NSString*)eventName; {
+    [self->_tracker trackWithString:eventValue eventName:eventName];
+}
+
+-(void)trackWithNumber:(nonnull NSNumber*)eventValue eventName:(nonnull NSString*)eventName; {
+    [self->_tracker trackWithNumber:eventValue eventName:eventName];
+}
 @end
 

@@ -78,4 +78,28 @@
     XCTAssertNotNil(eventDict[@"timestamp"]);
 }
 
+- (void)testInitEventWithParamsNilToDict {
+    NSString *eventName = @"testEvent";
+    NSObject *eventProps = nil;
+    O2MEvent *event = [[O2MEvent alloc] initWithProperties:eventName properties:eventProps];
+
+    NSDictionary *eventDict = [event toDict];
+    XCTAssertNotNil(eventDict[@"name"]);
+    XCTAssertEqual(eventDict[@"name"], eventName);
+    XCTAssertNil(eventDict[@"value"]);
+    XCTAssertNotNil(eventDict[@"timestamp"]);
+}
+
+- (void)testInitEventWithStringToDict {
+    NSString *eventName = @"testEvent";
+    NSString *eventProps = @"StringParam";
+    O2MEvent *event = [[O2MEvent alloc] initWithProperties:eventName properties:eventProps];
+
+    NSDictionary *eventDict = [event toDict];
+    XCTAssertNotNil(eventDict[@"name"]);
+    XCTAssertEqual(eventDict[@"name"], eventName);
+    XCTAssertEqual(eventDict[@"value"], eventProps);
+    XCTAssertNotNil(eventDict[@"timestamp"]);
+}
+
 @end

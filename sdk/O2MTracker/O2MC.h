@@ -95,5 +95,25 @@
  * @param eventName name of tracked event
  */
 -(void)trackWithProperties:(nonnull NSDictionary*)properties eventName:(nonnull NSString*)eventName;
-
+/**
+ * Tracks an event with a boolean value.
+ * Adds a new event with name and a boolean value.
+ * @param eventValue boolean value
+ * @param eventName name of tracked event
+ */
+-(void)trackWithBool:(BOOL)eventValue eventName:(nonnull NSString*)eventName;
+/**
+ * Tracks an event with a string value.
+ * Adds a new event with name and a string value.
+ * @param eventValue any kind of string
+ * @param eventName name of tracked event
+ */
+-(void)trackWithString:(nonnull NSString*)eventValue eventName:(nonnull NSString*)eventName;
+/**
+ * Tracks an event with a number value.
+ * Adds a new event with name and any kind of numeric value.
+ * @param eventValue any kind of number
+ * @param eventName name of tracked event
+ */
+-(void)trackWithNumber:(nonnull NSNumber*)eventValue eventName:(nonnull NSString*)eventName;
 @end

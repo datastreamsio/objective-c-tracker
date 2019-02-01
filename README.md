@@ -42,7 +42,21 @@ Use the following method from anywhere to start tracking events. Be sure to impo
 [[O2MC sharedInstance] track:@"Hello world!"];
 ```
 
+Events can also contain values. Use any of the following methods when tracking additional event data.
 
+```objective-c
+// Dictionary values
+[[O2MC sharedInstance] trackWithProperties:@{@"Hello": @"World", @"LuckyNumber": @7} eventName:@"trackWithDict"];
+
+// Booleans
+[[O2MC sharedInstance] trackWithBool:YES eventName:@"trackWithBool"];
+
+// Any type of number from NSNumber
+[[O2MC sharedInstance] trackWithNumber:[[NSNumber alloc] initWithInt:12345] eventName:@"trackWithNumber"];
+
+// And of course a string!
+[[O2MC sharedInstance] trackWithString:@"stringValue" eventName:@"trackWithString"];
+```
 ## Configuration
 
 ### View tracking
