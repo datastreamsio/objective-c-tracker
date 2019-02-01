@@ -87,6 +87,14 @@ Please consider defining the development or production URL based on the build co
 
 `[[O2MC sharedInstance] setSessionIdentifier]`
 
+### View tracking
+
+The SDK can automatically track view changes by hooking into `UIViewController`'s `viewDidAppear` and  `viewWillDisappear` methods.
+
+View tracking isn't enabled by default. It can be enabled by defining `O2M_TRACK_VIEWS` as a boolean in `Info.plist` and set it to `YES`.
+
+*note: at the moment view tracking only works with objective-c code bases*
+
 ## Control methods
 
 ### stop
