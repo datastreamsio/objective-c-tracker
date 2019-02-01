@@ -41,6 +41,20 @@ Please consider defining the development or production URL based on the build co
 
 `[[O2MC sharedInstance] getEndpoint]`
 
+### setEndpoint
+
+```objective-c
+/**
+ * Configures an end point where the events will be dispatched to.
+ * @param endpoint http(s) URL which should be publicly reachable
+ */
+-(void) setEndpoint:(nonnull NSString *)endpoint;
+```
+
+> Invoke method by executing the following statement
+
+`[[O2MC sharedInstance] setEndpoint:@"<endpoint>"];`
+
 ### setMaxRetries
 
 ```objective-c
@@ -170,3 +184,48 @@ Optionally the stop method also accepts a BOOL. If true, the currently queued ev
 
 `[[O2MC sharedInstance] trackWithProperties:@"<eventname>" properties:@{@"<prop1>": @1, @"<prop2>": @2}];`
 
+### trackWithBool
+
+```objective-c
+/**
+ * Tracks an event with a boolean value.
+ * Adds a new event with name and a boolean value.
+ * @param eventValue boolean value
+ * @param eventName name of tracked event
+ */
+-(void)trackWithBool:(BOOL)eventValue eventName:(nonnull NSString*)eventName;
+```
+> Invoke method by executing the following statement
+
+`[[O2MC sharedInstance] trackWithBool:YES eventName:@"trackwithBool"];`
+
+### trackWithString
+
+```objective-c
+/**
+ * Tracks an event with a string value.
+ * Adds a new event with name and a string value.
+ * @param eventValue any kind of string
+ * @param eventName name of tracked event
+ */
+-(void)trackWithString:(nonnull NSString*)eventValue eventName:(nonnull NSString*)eventName;
+```
+> Invoke method by executing the following statement
+
+`[[O2MC sharedInstance] trackWithString:@"Stringtrack" eventName:@"trackwithString";`
+
+### trackWithNumber
+
+```objective-c
+/**
+ * Tracks an event with a number value.
+ * Adds a new event with name and any kind of numeric value.
+ * @param eventValue any kind of number
+ * @param eventName name of tracked event
+ */
+-(void)trackWithNumber:(nonnull NSNumber*)eventValue eventName:(nonnull NSString*)eventName;
+```
+
+> Invoke method by executing the following statement
+
+`[[O2MC sharedInstance] trackWithNumber:[[NSNumber alloc] initWithInt:3] eventName:@"trackWithNumber"];`
