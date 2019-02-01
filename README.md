@@ -77,3 +77,9 @@ The SDK can automatically track view changes by hooking into `UIViewController`'
 View tracking isn't enabled by default. It can be enabled by defining `O2M_TRACK_VIEWS` as a boolean in `Info.plist` and set it to `YES`.
 
 *note: at the moment view tracking only works with objective-c code bases*
+
+## License
+
+[MIT license](LICENSE).
+
+Copyright (c) Insite Innovations and Properties B.V.
