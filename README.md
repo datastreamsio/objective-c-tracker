@@ -70,13 +70,15 @@ Events can also contain values. Use any of the following methods when tracking a
 ```
 ## Configuration
 
-### View tracking
+This is how you'd initialize the O2MC tracking SDK:
 
-The SDK can automatically track view changes by hooking into `UIViewController`'s `viewDidAppear` and  `viewWillDisappear` methods.
+```objective-c
+[[O2MC sharedInstance] setEndpoint:@"<endpoint>"];
+```
 
-View tracking isn't enabled by default. It can be enabled by defining `O2M_TRACK_VIEWS` as a boolean in `Info.plist` and set it to `YES`.
+*Please consider defining the development or production URL based on the build configuration.*
 
-*note: at the moment view tracking only works with objective-c code bases*
+Refer to the [API documentation](API.md) for more details on how to use and configure the SDK.
 
 ## License
 
