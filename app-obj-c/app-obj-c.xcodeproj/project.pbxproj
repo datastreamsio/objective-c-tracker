@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22CE68532203520800BDDAFD /* O2MTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CE6850220351CF00BDDAFD /* O2MTracker.framework */; };
 		22F901EB20B55B030060CEF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F901EA20B55B030060CEF5 /* AppDelegate.m */; };
 		22F901EE20B55B030060CEF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F901ED20B55B030060CEF5 /* ViewController.m */; };
 		22F901F120B55B030060CEF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F901EF20B55B030060CEF5 /* Main.storyboard */; };
@@ -15,10 +16,23 @@
 		22F901F920B55B040060CEF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F901F820B55B040060CEF5 /* main.m */; };
 		22F9020320B55B040060CEF5 /* app_obj_cTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F9020220B55B040060CEF5 /* app_obj_cTests.m */; };
 		22F9020E20B55B040060CEF5 /* app_obj_cUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F9020D20B55B040060CEF5 /* app_obj_cUITests.m */; };
-		22F9022620B58CC80060CEF5 /* libdatastreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F9022020B58C790060CEF5 /* libdatastreams.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		22CE684F220351CF00BDDAFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22CE684A220351CF00BDDAFD /* O2MTracker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 226F871721DE3A5F00F21E7B;
+			remoteInfo = O2MTracker;
+		};
+		22CE6851220351CF00BDDAFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22CE684A220351CF00BDDAFD /* O2MTracker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 22E6563621DE690B003FC05D;
+			remoteInfo = O2MTrackerTests;
+		};
 		22F901FF20B55B040060CEF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22F901DE20B55B030060CEF5 /* Project object */;
@@ -33,23 +47,10 @@
 			remoteGlobalIDString = 22F901E520B55B030060CEF5;
 			remoteInfo = "app-obj-c";
 		};
-		22F9021F20B58C790060CEF5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22F9021B20B58C780060CEF5 /* O2MC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3CB18376E4BAE82EB902F81E;
-			remoteInfo = datastreams;
-		};
-		22F9022320B58CC40060CEF5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22F9021B20B58C780060CEF5 /* O2MC.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CB186CD2A6A8575D2DFBD56;
-			remoteInfo = datastreams;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22CE684A220351CF00BDDAFD /* O2MTracker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = O2MTracker.xcodeproj; path = ../sdk/O2MTracker.xcodeproj; sourceTree = "<group>"; };
 		22F901E620B55B030060CEF5 /* app-obj-c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-obj-c.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F901E920B55B030060CEF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22F901EA20B55B030060CEF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		22F9020920B55B040060CEF5 /* app-obj-cUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "app-obj-cUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F9020D20B55B040060CEF5 /* app_obj_cUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = app_obj_cUITests.m; sourceTree = "<group>"; };
 		22F9020F20B55B040060CEF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22F9021B20B58C780060CEF5 /* O2MC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = O2MC.xcodeproj; path = ../sdk/O2MC.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F9022620B58CC80060CEF5 /* libdatastreams.a in Frameworks */,
+				22CE68532203520800BDDAFD /* O2MTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,10 +95,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22CE684B220351CF00BDDAFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22CE6850220351CF00BDDAFD /* O2MTracker.framework */,
+				22CE6852220351CF00BDDAFD /* O2MTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		22F901DD20B55B030060CEF5 = {
 			isa = PBXGroup;
 			children = (
-				22F9021B20B58C780060CEF5 /* O2MC.xcodeproj */,
 				22F901E820B55B030060CEF5 /* app-obj-c */,
 				22F9020120B55B040060CEF5 /* app-obj-cTests */,
 				22F9020C20B55B040060CEF5 /* app-obj-cUITests */,
@@ -151,17 +159,10 @@
 			path = "app-obj-cUITests";
 			sourceTree = "<group>";
 		};
-		22F9021C20B58C780060CEF5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				22F9022020B58C790060CEF5 /* libdatastreams.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		22F9022520B58CC80060CEF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22CE684A220351CF00BDDAFD /* O2MTracker.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,7 +181,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				22F9022420B58CC40060CEF5 /* PBXTargetDependency */,
 			);
 			name = "app-obj-c";
 			productName = "app-obj-c";
@@ -258,8 +258,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 22F9021C20B58C780060CEF5 /* Products */;
-					ProjectRef = 22F9021B20B58C780060CEF5 /* O2MC.xcodeproj */;
+					ProductGroup = 22CE684B220351CF00BDDAFD /* Products */;
+					ProjectRef = 22CE684A220351CF00BDDAFD /* O2MTracker.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -272,11 +272,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		22F9022020B58C790060CEF5 /* libdatastreams.a */ = {
+		22CE6850220351CF00BDDAFD /* O2MTracker.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libdatastreams.a;
-			remoteRef = 22F9021F20B58C790060CEF5 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = O2MTracker.framework;
+			remoteRef = 22CE684F220351CF00BDDAFD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		22CE6852220351CF00BDDAFD /* O2MTrackerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = O2MTrackerTests.xctest;
+			remoteRef = 22CE6851220351CF00BDDAFD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -347,11 +354,6 @@
 			isa = PBXTargetDependency;
 			target = 22F901E520B55B030060CEF5 /* app-obj-c */;
 			targetProxy = 22F9020A20B55B040060CEF5 /* PBXContainerItemProxy */;
-		};
-		22F9022420B58CC40060CEF5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = datastreams;
-			targetProxy = 22F9022320B58CC40060CEF5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

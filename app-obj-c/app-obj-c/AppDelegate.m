@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "O2MC.h"
+#import <O2MTracker/O2MTracker.h>
 
 @interface AppDelegate ()
 
