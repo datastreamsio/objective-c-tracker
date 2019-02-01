@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		226F872821DE3A5F00F21E7B /* O2MTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 226F871A21DE3A5F00F21E7B /* O2MTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		226F874821DE3A9500F21E7B /* O2MDispatcherDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 226F873121DE3A9400F21E7B /* O2MDispatcherDelegate.h */; };
-		226F874921DE3A9500F21E7B /* O2MTagger.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F873221DE3A9400F21E7B /* O2MTagger.m */; };
 		226F874A21DE3A9500F21E7B /* O2MUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F873321DE3A9400F21E7B /* O2MUtil.m */; };
 		226F874B21DE3A9500F21E7B /* O2MDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F873421DE3A9400F21E7B /* O2MDispatcher.m */; };
 		226F874C21DE3A9500F21E7B /* O2MLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 226F873521DE3A9500F21E7B /* O2MLogger.h */; };
 		226F874D21DE3A9500F21E7B /* O2MC.h in Headers */ = {isa = PBXBuildFile; fileRef = 226F873621DE3A9500F21E7B /* O2MC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		226F874E21DE3A9500F21E7B /* O2MTagger.h in Headers */ = {isa = PBXBuildFile; fileRef = 226F873721DE3A9500F21E7B /* O2MTagger.h */; };
 		226F874F21DE3A9500F21E7B /* O2MC.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F873821DE3A9500F21E7B /* O2MC.m */; };
 		226F875021DE3A9500F21E7B /* UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F873921DE3A9500F21E7B /* UIViewController.m */; };
 		226F875121DE3A9500F21E7B /* O2MConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F873A21DE3A9500F21E7B /* O2MConfig.m */; };
@@ -51,12 +49,10 @@
 		226F871A21DE3A5F00F21E7B /* O2MTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = O2MTracker.h; sourceTree = "<group>"; };
 		226F871B21DE3A5F00F21E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		226F873121DE3A9400F21E7B /* O2MDispatcherDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = O2MDispatcherDelegate.h; sourceTree = "<group>"; };
-		226F873221DE3A9400F21E7B /* O2MTagger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = O2MTagger.m; sourceTree = "<group>"; };
 		226F873321DE3A9400F21E7B /* O2MUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = O2MUtil.m; sourceTree = "<group>"; };
 		226F873421DE3A9400F21E7B /* O2MDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = O2MDispatcher.m; sourceTree = "<group>"; };
 		226F873521DE3A9500F21E7B /* O2MLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = O2MLogger.h; sourceTree = "<group>"; };
 		226F873621DE3A9500F21E7B /* O2MC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = O2MC.h; sourceTree = "<group>"; };
-		226F873721DE3A9500F21E7B /* O2MTagger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = O2MTagger.h; sourceTree = "<group>"; };
 		226F873821DE3A9500F21E7B /* O2MC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = O2MC.m; sourceTree = "<group>"; };
 		226F873921DE3A9500F21E7B /* UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewController.m; sourceTree = "<group>"; };
 		226F873A21DE3A9500F21E7B /* O2MConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = O2MConfig.m; sourceTree = "<group>"; };
@@ -133,8 +129,6 @@
 				226F873D21DE3A9500F21E7B /* O2MEventManager.m */,
 				226F873521DE3A9500F21E7B /* O2MLogger.h */,
 				226F873E21DE3A9500F21E7B /* O2MLogger.m */,
-				226F873721DE3A9500F21E7B /* O2MTagger.h */,
-				226F873221DE3A9400F21E7B /* O2MTagger.m */,
 				226F874721DE3A9500F21E7B /* O2MUtil.h */,
 				226F873321DE3A9400F21E7B /* O2MUtil.m */,
 				226F873921DE3A9500F21E7B /* UIViewController.m */,
@@ -176,7 +170,6 @@
 				226F874D21DE3A9500F21E7B /* O2MC.h in Headers */,
 				226F875921DE3A9500F21E7B /* O2MBatch.h in Headers */,
 				226F874C21DE3A9500F21E7B /* O2MLogger.h in Headers */,
-				226F874E21DE3A9500F21E7B /* O2MTagger.h in Headers */,
 				226F875C21DE3A9500F21E7B /* O2MBatchManager.h in Headers */,
 				226F875621DE3A9500F21E7B /* O2MDispatcher.h in Headers */,
 				226F872821DE3A5F00F21E7B /* O2MTracker.h in Headers */,
@@ -291,7 +284,6 @@
 				226F874F21DE3A9500F21E7B /* O2MC.m in Sources */,
 				226F875A21DE3A9500F21E7B /* O2MBatch.m in Sources */,
 				226F875B21DE3A9500F21E7B /* O2MEvent.m in Sources */,
-				226F874921DE3A9500F21E7B /* O2MTagger.m in Sources */,
 				226F875121DE3A9500F21E7B /* O2MConfig.m in Sources */,
 				226F875021DE3A9500F21E7B /* UIViewController.m in Sources */,
 				226F875421DE3A9500F21E7B /* O2MEventManager.m in Sources */,

@@ -5,13 +5,31 @@
 //  Created by Nicky Romeijn on 09-08-16.
 //  Copyright © 2016 Adversitement. All rights reserved.
 //
-
-#import <Foundation/Foundation.h>
 #import "O2MC.h"
+
+#import "O2MBatchManager.h"
 #import "O2MConfig.h"
-#import "O2MTagger.h"
+#import "O2MEventManager.h"
+#import "Models/O2MEvent.h"
+#import "O2MLogger.h"
+#import "O2MUtil.h"
+
+@interface O2MC()
+
+// Managers
+@property O2MBatchManager *batchManager;
+@property O2MEventManager *eventManager;
+
+// Misc
+@property NSTimer * batchCreateTimer;
+@property O2MLogger *logger;
+@property dispatch_queue_t tagQueue;
+
+@end
 
 @implementation O2MC
+
+#pragma mark - Constructors / initializer methods
 
 +(nonnull instancetype) sharedInstance; {
     static O2MC *sharedInstance = nil;
@@ -41,68 +59,156 @@
  */
 -(nonnull instancetype) initWithDispatchInterval:(nonnull NSNumber *)dispatchInterval endpoint:(nonnull NSString *)endpoint; {
      if (self = [super init]) {
-         self->_tracker = [[O2MTagger alloc] init:endpoint :dispatchInterval];
+         _batchManager = [[O2MBatchManager alloc] init];
+         _eventManager = [[O2MEventManager alloc] init];
+         _logger = [[O2MLogger alloc] initWithTopic:"tagger"];
+
+         _tagQueue = dispatch_queue_create("io.o2mc.sdk", DISPATCH_QUEUE_SERIAL);
+
+         [self->_batchManager setEndpoint:endpoint];
+         [self setDispatchInterval:dispatchInterval];
+         [self batchWithInterval:O2MConfig.batchInterval];
 
          // Default setting
-         [_tracker setMaxRetries:O2MConfig.maxRetries];
+         [self setMaxRetries:O2MConfig.maxRetries];
      }
      return self;
 }
 
+#pragma mark - Internal methods
+
+-(void) batchWithInterval :(NSNumber *) dispatchInterval; {
+    if (self->_batchCreateTimer) {
+        [self->_batchCreateTimer invalidate];
+        self->_batchCreateTimer = nil;
+    }
+    self->_batchCreateTimer = [NSTimer timerWithTimeInterval:[dispatchInterval floatValue] target:self selector:@selector(createBatch:) userInfo:nil repeats:YES];
+
+    // Start the dispatch timer
+    [NSRunLoop.mainRunLoop addTimer:self->_batchCreateTimer forMode:NSRunLoopCommonModes];
+}
+
+-(void) createBatch:(NSTimer *)timer;{
+    dispatch_async(_tagQueue, ^{
+        // Check if there are any events to batch
+        if(self->_eventManager.eventCount == 0) return;
+
+        // Collect events from the event manager and push them to the batchmanager.
+        // We copy the events to a new array since the events would be emptied by ARC before they
+        // could be added to a batch.
+        [self->_batchManager createBatchWithEvents:[[NSArray alloc] initWithArray:self->_eventManager.events]];
+        [self->_eventManager clearEvents];
+    });
+}
+
+-(void) clearFunnel; {
+    dispatch_async(_tagQueue, ^{
+        [self->_eventManager clearEvents];
+        [self->_logger logD:@"clearing the funnel"];
+    });
+}
+
+-(void)stopTimer; {
+    if(self->_batchCreateTimer) {
+        [self->_batchCreateTimer invalidate];
+        self->_batchCreateTimer = nil;
+    }
+}
+
+#pragma mark - Configuration methods
+
 -(nonnull NSString*) getEndpoint; {
-    return [self->_tracker getEndpoint];
+    return self->_batchManager.endpoint;
 }
 
 -(void) setEndpoint:(nonnull NSString *)endpoint; {
-    [self->_tracker setEndpoint:endpoint];
+    [self->_batchManager setEndpoint:endpoint];
 }
 
 -(void) setDispatchInterval:(nonnull NSNumber*)dispatchInterval; {
     O2MConfig.dispatchInterval = dispatchInterval;
-    [self->_tracker setDispatchInterval:dispatchInterval];
+    [self->_batchManager dispatchWithInterval:dispatchInterval];
 }
 
 -(void) setMaxRetries :(NSInteger)maxRetries; {
-    [self->_tracker setMaxRetries:maxRetries];
+    [_batchManager setMaxRetries: maxRetries];
 }
 
+#pragma mark - Control methods
+
 -(void) stop; {
-    [self->_tracker stop];
+    [self stop:YES];
 }
 
 -(void) stop:(BOOL)clearFunnel; {
-    [self->_tracker stop:clearFunnel];
+    [self->_logger logI:@"stopping tracking"];
+    [self->_batchManager stop];
+    [self stopTimer];
+    
+    if (clearFunnel == NO) return;
+    
+    [self clearFunnel];
 }
 
 -(void) resume; {
-    [self->_tracker resume];
+    if(![[self batchCreateTimer] isValid]) {
+        [self batchWithInterval:O2MConfig.batchInterval];
+    }
+
+    if(![self->_batchManager isDispatching]) {
+        [self->_batchManager dispatchWithInterval:O2MConfig.dispatchInterval];
+    }
 }
 
+#pragma mark - Internal tracking methods
+-(void)addEventToBatchWithProperties:(NSObject*)properties eventName:(NSString*)eventName; {
+    dispatch_async(_tagQueue, ^{
+        if (![self->_batchManager isDispatching]) return;
+        [self->_logger logD:@"Track %@:%@", eventName, properties];
+
+        [self->_eventManager addEvent: [[O2MEvent alloc] initWithProperties:eventName
+                                                                 properties:properties]];
+    });
+}
+
+-(void)addEventToBatch:(NSString*)eventName; {
+    dispatch_async(_tagQueue, ^{
+        if (![self->_batchManager isDispatching]) return;
+        [self->_logger logD:@"Track %@", eventName];
+
+        [self->_eventManager addEvent: [[O2MEvent alloc] init:eventName]];
+    });
+}
+
+#pragma mark - Tracking methods
+
 -(void)setIdentifier:(nullable NSString*) uniqueIdentifier; {
-    [self->_tracker setIdentifier:uniqueIdentifier];
+    [self->_batchManager setSessionIdentifier:uniqueIdentifier];
 }
 
 -(void)setSessionIdentifier; {
-    [self->_tracker setSessionIdentifier];
+    [self->_batchManager setSessionIdentifier:[[NSUUID UUID] UUIDString]];
 }
 
--(void)track:(nonnull NSString*)eventName; {
-    [self->_tracker track:eventName];
+-(void)track:(NSString*)eventName; {
+    [self addEventToBatch:eventName];
 }
 
--(void)trackWithProperties:(nonnull NSDictionary*)properties eventName:(nonnull NSString*)eventName; {
-    [self->_tracker trackWithProperties:properties eventName:eventName];
+-(void)trackWithProperties:(NSObject*)properties eventName:(NSString*)eventName;
+{
+    [self addEventToBatchWithProperties:properties eventName:eventName];
 }
 
 -(void)trackWithBool:(BOOL)eventValue eventName:(nonnull NSString*)eventName; {
-    [self->_tracker trackWithBool:eventValue eventName:eventName];
+    // Convert BOOL with NSNumber since we only want objects when serializing.
+    [self addEventToBatchWithProperties:[[NSNumber alloc] initWithBool:eventValue] eventName:eventName];
 }
 -(void)trackWithString:(nonnull NSString*)eventValue eventName:(nonnull NSString*)eventName; {
-    [self->_tracker trackWithString:eventValue eventName:eventName];
+    [self addEventToBatchWithProperties:eventValue eventName:eventName];
 }
 
 -(void)trackWithNumber:(nonnull NSNumber*)eventValue eventName:(nonnull NSString*)eventName; {
-    [self->_tracker trackWithNumber:eventValue eventName:eventName];
+    [self addEventToBatchWithProperties:eventValue eventName:eventName];
 }
 @end
 
