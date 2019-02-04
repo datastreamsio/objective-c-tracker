@@ -8,13 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class O2MTagger;
 
 @interface O2MC : NSObject {
 }
-
-@property (readonly, nonatomic, nonnull) O2MTagger *tracker;
-
 
 #pragma mark - Constructors
 
@@ -43,6 +39,7 @@
  * @param endpoint http(s) URL which should be publicly reachable
  */
 -(void) setEndpoint:(nonnull NSString *)endpoint;
+
 /**
  * The max amount of connection retries before stopping dispatching.
  * @param maxRetries retry amount (defaults to 5)
@@ -55,6 +52,7 @@
  * Stops tracking of events.
  */
 -(void) stop;
+
 /**
  * Stops tracking of events.
  * @param clearFunnel clears any existing events
@@ -88,6 +86,7 @@
  * @param eventName name of tracked event
  */
 -(void)track:(nonnull NSString*)eventName;
+
 /**
  * Tracks an event with additional data.
  * Essentially adds a new event with the String parameter as name and any additonal properties.
@@ -95,6 +94,7 @@
  * @param eventName name of tracked event
  */
 -(void)trackWithProperties:(nonnull NSDictionary*)properties eventName:(nonnull NSString*)eventName;
+
 /**
  * Tracks an event with a boolean value.
  * Adds a new event with name and a boolean value.
@@ -102,6 +102,7 @@
  * @param eventName name of tracked event
  */
 -(void)trackWithBool:(BOOL)eventValue eventName:(nonnull NSString*)eventName;
+
 /**
  * Tracks an event with a string value.
  * Adds a new event with name and a string value.
@@ -109,6 +110,7 @@
  * @param eventName name of tracked event
  */
 -(void)trackWithString:(nonnull NSString*)eventValue eventName:(nonnull NSString*)eventName;
+
 /**
  * Tracks an event with a number value.
  * Adds a new event with name and any kind of numeric value.
@@ -116,4 +118,5 @@
  * @param eventName name of tracked event
  */
 -(void)trackWithNumber:(nonnull NSNumber*)eventValue eventName:(nonnull NSString*)eventName;
+
 @end
