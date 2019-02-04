@@ -89,7 +89,7 @@
 
 /**
  * Tracks an event with additional data.
- * Essentially adds a new event with the String parameter as name and any additonal properties.
+ * Essentially adds a new event with the String parameter as name and any additional properties.
  * @param properties anything you'd like to keep track of
  * @param eventName name of tracked event
  */
